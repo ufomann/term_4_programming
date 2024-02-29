@@ -85,7 +85,7 @@ int main(int argc, char **argv)
     if(n[0])
       gmsh::model::mesh::field::setString(f, "F", "2*Sin((x+y)/5) + 3");
     else
-      gmsh::model::mesh::field::setString(f, "F", "4");
+      gmsh::model::mesh::field::setString(f, "F", "1");
     gmsh::model::mesh::field::setAsBackgroundMesh(f);
 
     gmsh::model::mesh::generate(3);
