@@ -34,10 +34,10 @@ int main(int argc, char **argv){
     double r_in = 1.0;
     double r_out = 1.5;
     double R = 5.0;
-    double lc = 0.05;
+    double lc = 0.1;
     int n_on_arc = 10;
     double ang = 2 * PI / n_on_arc;
-    double thor_ang = PI;
+    double thor_ang = 2 * PI;
     double n_rings = 100;
 
     gmsh::initialize();
@@ -53,6 +53,14 @@ int main(int argc, char **argv){
     
     gmsh::vectorpair out;
     gmsh::model::occ::revolve({{2, slice}}, 0, 0, 0, 0, 0, 1, thor_ang, out, {n_rings});
+
+    gmsh::vectorpair s;
+    gmsh::model::getEntities(s, 2);
+    std::vector<int> sl;
+    for(auto surf : s) sl.push_back(surf.second);
+    int l = gmsh::model::geo::addSurfaceLoop(sl);
+    gmsh::model::geo::addVolume({l});
+
 
     gmsh::model::occ::synchronize();
     gmsh::model::mesh::generate(3);
