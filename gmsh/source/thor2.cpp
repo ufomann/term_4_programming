@@ -54,12 +54,12 @@ int main(int argc, char **argv){
     gmsh::vectorpair out;
     gmsh::model::occ::revolve({{2, slice}}, 0, 0, 0, 0, 0, 1, thor_ang, out, {n_rings});
 
-    gmsh::vectorpair s;
-    gmsh::model::getEntities(s, 2);
-    std::vector<int> sl;
-    for(auto surf : s) sl.push_back(surf.second);
-    int l = gmsh::model::geo::addSurfaceLoop(sl);
-    gmsh::model::geo::addVolume({l});
+    // gmsh::vectorpair s;
+    // gmsh::model::getEntities(s, 2);
+    // std::vector<int> sl;
+    // for(auto surf : s) sl.push_back(surf.second);
+    // int l = gmsh::model::geo::addSurfaceLoop(sl);
+    // gmsh::model::geo::addVolume({l});
 
 
     gmsh::model::occ::synchronize();
