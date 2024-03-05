@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "-std=c++11 -g")
 project(vtkdemo)
 #  add_executable(cubic2d cubic2d.cpp)
 # add_executable(cubic3d cubic3d.cpp)
-add_executable(tetr3d tetr3d.cpp)
+add_executable(spring spring.cpp)
 
 # Найдём VTK
 find_package(VTK REQUIRED)
@@ -26,5 +26,5 @@ set(GMSH_LIBRARY gmsh)
 # target_link_libraries(cubic3d ${VTK_LIBRARIES})
 
 # ... а тут ещё и gmsh
-target_link_libraries(tetr3d ${VTK_LIBRARIES})
-target_link_libraries(tetr3d ${GMSH_LIBRARY})
+target_link_libraries(spring ${VTK_LIBRARIES})
+target_link_libraries(spring ${GMSH_LIBRARY})
