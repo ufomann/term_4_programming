@@ -1,0 +1,3 @@
+/home/lesha/mipt/plusi/term_4/fenics/documented/navier-stokes/cpp/build/CMakeFiles/demo_navier-stokes.dir
+/home/lesha/mipt/plusi/term_4/fenics/documented/navier-stokes/cpp/build/CMakeFiles/edit_cache.dir
+/home/lesha/mipt/plusi/term_4/fenics/documented/navier-stokes/cpp/build/CMakeFiles/rebuild_cache.dir
